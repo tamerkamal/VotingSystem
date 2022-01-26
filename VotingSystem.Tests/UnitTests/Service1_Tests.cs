@@ -3,15 +3,15 @@ using System;
 using System.Collections.Generic;
 using Xunit;
 
-namespace VotingSystem.Tests
+namespace SandBox.Tests.UnitTests
 {     
-    public class Class1_UnitTest
+    public class Service1_Tests
     {
         [Fact] // Static values, no parameters
         public void Add_StaticTest()
         {
             // Assign
-            int result = new Class1().Add(2, 3);
+            int result = new Service1().Add(2, 3);
 
             // Assert
             Assert.Equal(6, result);
@@ -33,7 +33,7 @@ namespace VotingSystem.Tests
         public void Add_DynamicTest(int num1, int num2, int expected)
         {
             // Assign
-            int result = new Class1().Add(num1, num2);
+            int result = new Service1().Add(num1, num2);
 
             // Assert
             Assert.Equal(expected, result);

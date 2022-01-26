@@ -1,4 +1,4 @@
-﻿using SandBox.DTOs;
+﻿using SandBox.Entities;
 using SandBox.Services;
 using System;
 
@@ -18,24 +18,24 @@ namespace SandBox
 
             CounterService  counterService = new CounterService();  
 
-            int totalCounts = yesCounter.counterValue + noCounter.counterValue + mayBeCounter.counterValue;
+            int totalCounts = yesCounter.Value + noCounter.Value + mayBeCounter.Value;
 
-            float yesPercentage = counterService.CalculatePercentageWith2DecimalPoints(yesCounter.counterValue, totalCounts);
-            float noPercentage = counterService.CalculatePercentageWith2DecimalPoints(noCounter.counterValue, totalCounts);
-            float mayBePercentage = counterService.CalculatePercentageWith2DecimalPoints(mayBeCounter.counterValue, totalCounts);
+            float yesPercentage = counterService.CalculatePercentageWith2DecimalPoints(yesCounter.Value, totalCounts);
+            float noPercentage = counterService.CalculatePercentageWith2DecimalPoints(noCounter.Value, totalCounts);
+            float mayBePercentage = counterService.CalculatePercentageWith2DecimalPoints(mayBeCounter.Value, totalCounts);
 
             Console.WriteLine($"Yes counts: {yesCounter}, No counts: {noCounter}, MayBe counts: {mayBeCounter}\n");
             Console.WriteLine($"Yes percentage: {yesPercentage}, No percentage: {noPercentage}, MayBe percentage: {mayBePercentage}\n");
 
-            if (yesCounter.counterValue > noCounter.counterValue && yesCounter.counterValue > mayBeCounter.counterValue)
+            if (yesCounter.Value > noCounter.Value && yesCounter.Value > mayBeCounter.Value)
             {
                 Console.WriteLine($"Yes won");
             }
-            else if (noCounter.counterValue > yesCounter.counterValue && noCounter.counterValue > mayBeCounter.counterValue)
+            else if (noCounter.Value > yesCounter.Value && noCounter.Value > mayBeCounter.Value)
             {
                 Console.WriteLine($"No won");
             }
-            else if (mayBeCounter.counterValue > yesCounter.counterValue && mayBeCounter.counterValue > noCounter.counterValue)
+            else if (mayBeCounter.Value > yesCounter.Value && mayBeCounter.Value > noCounter.Value)
             {
                 Console.WriteLine($"MayBe won");
             }

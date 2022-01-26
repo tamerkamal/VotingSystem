@@ -8,7 +8,7 @@ namespace SandBox.Services.Classes
         /// <summary>
     /// Class to be tested
     /// </summary>
-    public class Class1 : IClass1
+    public class Service1 : IService1
     {
         public int Add(int a, int b) => a + b;
 

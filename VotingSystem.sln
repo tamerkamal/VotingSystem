@@ -5,7 +5,11 @@ VisualStudioVersion = 17.0.32112.339
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SandBox", "SandBox\SandBox.csproj", "{E5792020-2F68-42D7-91E3-AB90B8E69A4D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VotingSystem.Tests", "VotingSystem.Tests\VotingSystem.Tests.csproj", "{6C486AD0-B712-4F53-B9A5-C3D8C8BACB2F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SandBox.Tests", "VotingSystem.Tests\SandBox.Tests.csproj", "{6C486AD0-B712-4F53-B9A5-C3D8C8BACB2F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Src", "Src", "{774454AE-E9CB-4249-94B3-C9EB5F39C10B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{DFDD13CA-E38E-43EC-83D6-BCEE74B73F01}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -24,6 +28,10 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{E5792020-2F68-42D7-91E3-AB90B8E69A4D} = {774454AE-E9CB-4249-94B3-C9EB5F39C10B}
+		{6C486AD0-B712-4F53-B9A5-C3D8C8BACB2F} = {DFDD13CA-E38E-43EC-83D6-BCEE74B73F01}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {BC4AFE16-40A2-42D9-8E95-24F141F95DD5}

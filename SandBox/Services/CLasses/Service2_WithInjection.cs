@@ -4,13 +4,12 @@ using System.Collections.Generic;
 using System.Text;
 
 namespace SandBox.Services
-{
-    #region Main Class
-    public class Class2_WithInjection
+{    
+    public class Service2_WithInjection
     {
-        private readonly IClass1 class1;
+        private readonly IService1 class1;
 
-        public Class2_WithInjection(IClass1 class1)
+        public Service2_WithInjection(IService1 class1)
         {
             this.class1 = class1;
         }
@@ -26,7 +25,5 @@ namespace SandBox.Services
         }
 
         public void Outer(int x, int y) => class1.Out(x, y);
-    }
-
-    #endregion
+    }   
 }
