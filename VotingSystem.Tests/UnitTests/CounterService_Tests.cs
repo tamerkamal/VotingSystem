@@ -24,7 +24,7 @@ namespace SandBox.Tests.UnitTests
         }
 
         [Fact]
-        public void CheckInitialValueGreatherThanOrEqual0()
+        public void Counter_CheckInitialValueGreatherThanOrEqual0()
         {
             var counter = new Counter("Yes", -1);
 
@@ -40,7 +40,7 @@ namespace SandBox.Tests.UnitTests
         [Theory] // parameterized
         [InlineData(5, 10, 50)]
         [InlineData(1, 3, 33.33)]
-        public void ChechCounterVotesPercentageBasedOn2DecimalPoints(int counterValue, int totalVotes, float expectedPercentage)
+        public void GetCounterVotesPercentage_ChechCounterVotesPercentageBasedOn2DecimalPoints(int counterValue, int totalVotes, float expectedPercentage)
         {
             var counter = new Counter("Yes", counterValue);
 
@@ -53,7 +53,7 @@ namespace SandBox.Tests.UnitTests
 
         [Theory] // parameterized        
         [InlineData(-1, 2)]
-        public void ChechCounterVotesThrowsArgumentExceptionWhenNegativ(int counterValue, int totalVotes)
+        public void GetCounterVotesPercentage_ChechCounterVotesThrowsArgumentExceptionWhenNegativ(int counterValue, int totalVotes)
         {
             var counter = new Counter("Yes", counterValue);
 

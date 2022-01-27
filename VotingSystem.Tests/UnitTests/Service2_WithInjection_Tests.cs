@@ -41,7 +41,7 @@ namespace SandBox.Tests.UnitTests
         }
 
         [Fact] // Static values, no parameters
-        public void OutVerifyHasBeenCalledTest()
+        public void Out_VerifyHasBeenCalled()
         {
             #region Mocking (Decoupling)
 
